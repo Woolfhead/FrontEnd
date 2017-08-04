@@ -1,0 +1,276 @@
+/* general */
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* --------- fonts ---------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fontawersome/fonts/fontawesome-webfont.eot');
+  src: url('../fontawersome/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../fontawersome/fonts/fontawesome-webfont.woff2') format('woff2'), url('../fontawersome/fonts/fontawesome-webfont.woff') format('woff'), url('../fontawersome/fonts/fontawesome-webfont.ttf') format('truetype'), url('../fontawersome/fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+}
+@font-face {
+  font-family: 'Kino';
+  src: url('../fonts/kino/955784.ttf');
+}
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../fonts/bebas_neue/bebasneue.eot');
+  src: url('../fonts/bebas_neue/bebasneue.eot?#iefix') format('embedded-opentype'), url('../fonts/bebas_neue/bebasneue.woff2') format('woff2'), url('../fonts/bebas_neue/bebasneue.woff') format('woff'), url('../fonts/bebas_neue/bebasneue.ttf') format('truetype'), url('../fonts/bebas_neue/bebasneue.svg#bebas_neueregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.nobreak {
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -o-column-break-inside: avoid;
+  -ms-column-break-inside: avoid;
+  display: table;
+}
+/* fonts */
+@font-face {
+  font-family: 'Courier';
+  src: url('../fonts/kurlier/cour.ttf') format('truetype');
+}
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.pull-center {
+  position: static;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.wrapper {
+  overflow-x: hidden;
+}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0px;
+}
+.container {
+  content: '';
+  max-width: 1920px;
+  width: 100%;
+}
+/* FUNCTIONS */
+/* END OF FUNCTIONS */
+/* ------------------------------------------- NAV -----------------*/
+.navbar.head-menu {
+  margin-bottom: 0px;
+  border: 4px solid #ffdccc;
+}
+.navbar.head-menu ul > li > a {
+  background-color: transparent;
+  color: #9a9a9a;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: Raleway;
+  font-weight: 400;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  line-height: 56px;
+}
+.navbar.head-menu ul > li > a:hover {
+  background-color: transparent;
+}
+.navbar.head-menu ul > li > a:hover,
+.navbar.head-menu ul > li > a:focus,
+.navbar.head-menu ul > li > a:visited {
+  color: #404040;
+}
+/* ------------------------------------------- nav  mobile -----------------*/
+.nav-mobile .navbar-toggle {
+  background-color: #ffdccc;
+}
+.nav-mobile .navbar-toggle .icon-bar {
+  background-color: red;
+}
+.nav-mobile .navbar-toggle:focus {
+  border: 1px solid red;
+}
+/* ------------------------------------------- LOGO -----------------*/
+a.logo {
+  text-decoration: none;
+}
+a.logo img {
+  padding-top: 24px;
+}
+a.logo h2,
+a.logo h6 {
+  text-align: center;
+  font-family: Courier;
+  text-transform: uppercase;
+  color: #000000;
+}
+a.logo h2 {
+  font-size: 28px;
+  margin-bottom: 0px;
+}
+a.logo h2 span {
+  margin: 0;
+  padding: 0;
+  color: #ffdccc;
+}
+a.logo h6 {
+  margin-top: 0px;
+  font-size: 14px;
+}
+/* ------------------------------------------- Gallery 1 -----------------*/
+.gallery-1 {
+  margin: 0;
+}
+.gallery-1 > div > div:nth-of-type(1) > a:before,
+.gallery-1 > div:nth-of-type(2) > div > a:before,
+.gallery-1 > div > div:nth-of-type(3) > a:before {
+  content: '';
+  border: 2px solid #ffffff;
+  position: absolute;
+  width: calc(100% - 22px);
+  height: calc(100% - 20px);
+  bottom: 0;
+  z-index: 3;
+  margin: 10px 9px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.gallery-1 > div > div:nth-of-type(1) > a:hover:before,
+.gallery-1 > div:nth-of-type(2) > div > a:hover:before,
+.gallery-1 > div > div:nth-of-type(3) > a:hover:before {
+  border: 2px solid #ffdccc;
+  -moz-opacity: 0.4;
+  -khtml-opacity: 0.4;
+  -webkit-opacity: 0.4;
+  opacity: 0.4;
+}
+.gallery-1 img {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+.gallery-1 a {
+  text-transform: none;
+  display: block;
+  background-color: #4c4c4c;
+  position: relative;
+}
+.gallery-1 a > img {
+  display: block;
+  overflow: hidden;
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -ms-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+.gallery-1 a > h2 {
+  overflow: hidden;
+  font-family: Raleway;
+  position: absolute;
+  top: 35%;
+  width: 60%;
+  margin: 0 20%;
+  padding: 18px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(233, 203, 189, 0.8);
+  z-index: 10;
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -ms-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+.gallery-1 a:hover > h2 {
+  background-color: rgba(233, 203, 189, 0.4);
+  color: #4c4c4c;
+}
+.gallery-1 a:hover > img {
+  position: static;
+  opacity: 0.6;
+}
+.row.gallery-1 .col-md-6,
+.row.gallery-1 .col-md-3,
+.row.gallery-1 .col-xs-12 {
+  padding: 0px;
+}
+.row.gallery-1 .row {
+  margin: 0px;
+}
+.center-block {
+  max-width: 100%;
+  width: 100%;
+  vertical-align: middle;
+  content: '';
+}
+.center-block:before {
+  content: '';
+  border: 1px solid #ffdccc;
+  position: absolute;
+  width: calc(100% - 56px);
+  height: calc(100% - 56px);
+  bottom: 0;
+  z-index: 3;
+  margin: 28px;
+}
+.center-block > div {
+  position: absolute;
+  max-width: 90%;
+  width: 100%;
+  top: 35%;
+  margin: 0 5%;
+}
+.center-block > div h2,
+.center-block > div p {
+  text-align: center;
+}
+.center-block > div h2 {
+  font-family: Great Vibes;
+  font-size: 37px;
+  color: #4c4c4c;
+}
+.center-block > div h2:before,
+.center-block > div h2:after {
+  content: '';
+  height: 1px;
+  width: 50px;
+  background-color: #ffdccc;
+  display: inline-block;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.center-block > div h2:before {
+  margin-right: 25px;
+}
+.center-block > div h2:after {
+  margin-left: 25px;
+}
+.center-block > div p {
+  font-family: Raleway;
+  font-weight: normal;
+  font-size: 14px;
+  color: #9d9d9d;
+}

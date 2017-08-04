@@ -1,0 +1,35 @@
+@media screen and (max-width: 992px) {
+  .navbar.head-menu ul > li > a {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+  a.logo h6 {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 769px) {
+  .nav-mobile {
+    display: block;
+  }
+  .nav-mobile .navbar {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .center-block:before {
+    width: calc(100% - 36px);
+    height: calc(100% - 36px);
+    margin: 18px;
+  }
+  .center-block > div {
+    top: 12%;
+  }
+  .center-block > div h2 {
+    font-size: 27px;
+  }
+}

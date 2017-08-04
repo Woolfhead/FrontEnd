@@ -1,0 +1,36 @@
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* --------- fonts ---------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fontawersome/fonts/fontawesome-webfont.eot');
+  src: url('../fontawersome/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../fontawersome/fonts/fontawesome-webfont.woff2') format('woff2'), url('../fontawersome/fonts/fontawesome-webfont.woff') format('woff'), url('../fontawersome/fonts/fontawesome-webfont.ttf') format('truetype'), url('../fontawersome/fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+}
+@font-face {
+  font-family: 'Kino';
+  src: url('../fonts/kino/955784.ttf');
+}
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../fonts/bebas_neue/bebasneue.eot');
+  src: url('../fonts/bebas_neue/bebasneue.eot?#iefix') format('embedded-opentype'), url('../fonts/bebas_neue/bebasneue.woff2') format('woff2'), url('../fonts/bebas_neue/bebasneue.woff') format('woff'), url('../fonts/bebas_neue/bebasneue.ttf') format('truetype'), url('../fonts/bebas_neue/bebasneue.svg#bebas_neueregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.nobreak {
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -o-column-break-inside: avoid;
+  -ms-column-break-inside: avoid;
+  display: table;
+}

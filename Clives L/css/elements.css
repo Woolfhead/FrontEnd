@@ -1,0 +1,42 @@
+.clearfix {
+  /*
+  display: block;
+  zoom: 1;
+  */
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* --------- fonts ---------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawersome/fontawesome-webfont.eot');
+  src: url('../fonts/fontawersome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/fontawersome/fontawesome-webfont.woff2') format('woff2'), url('../fonts/fontawersome/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawersome/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontawersome/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+}
+/* Код для подключения шрифта в /css/stylename.css */
+/* font-family: "HelveticaRegular"; */
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica/Helvetica-Condensed.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "HelveticaBold"; */
+@font-face {
+  font-family: "HelveticaBold";
+  src: url("../fonts/Helvetica/Helvetica-Condensed-Bold.otf");
+  font-style: normal;
+  font-weight: bold;
+}
+.nobreak {
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -o-column-break-inside: avoid;
+  -ms-column-break-inside: avoid;
+  display: table;
+}

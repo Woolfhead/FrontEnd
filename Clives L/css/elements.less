@@ -1,0 +1,410 @@
+.font-1(@weight: normal, @size: 15px, @lineHeight: 15px) {
+  font-family: Lato;
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @lineHeight;
+}
+
+@color-1: #ffffff;
+@color-2: #000000;
+
+@green1: #26a65b;
+@grey1: #c6c8ca;
+@violet1: #0b8cce ;
+@light1: #f8f8f8;
+
+@black_2: #231f20;
+
+@red: #ed1c24;
+@red-2: #c4161c;
+
+.clearfix{
+  /*
+  display: block;
+  zoom: 1;
+  */
+  &:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+/* --------- fonts ---------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawersome/fontawesome-webfont.eot');
+  src: url('../fonts/fontawersome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fontawersome/fontawesome-webfont.woff2') format('woff2'),
+  url('../fonts/fontawersome/fontawesome-webfont.woff') format('woff'),
+  url('../fonts/fontawersome/fontawesome-webfont.ttf') format('truetype'),
+  url('../fonts/fontawersome/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+}
+
+/* Код для подключения шрифта в /css/stylename.css */
+
+/* font-family: "HelveticaRegular"; */
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica/Helvetica-Condensed.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "HelveticaBold"; */
+
+@font-face {
+  font-family: "HelveticaBold";
+  src: url("../fonts/Helvetica/Helvetica-Condensed-Bold.otf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+
+
+
+
+// GRADIENTS
+// ---------
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear,
+  left bottom,
+  left top,
+  color-stop(0, @start),
+  color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom,
+  @start,
+  @stop);
+  background: -moz-linear-gradient(center bottom,
+  @start 0%,
+  @stop 100%);
+}
+
+
+.bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
+  background: @color;
+  background: -webkit-gradient(linear,
+  left bottom,
+  left top,
+  color-stop(0, rgb(@start,@start,@start)),
+  color-stop(1, rgb(@stop,@stop,@stop)));
+  background: -ms-linear-gradient(bottom,
+  rgb(@start,@start,@start) 0%,
+  rgb(@start,@start,@start) 100%);
+  background: -moz-linear-gradient(center bottom,
+  rgb(@start,@start,@start) 0%,
+  rgb(@stop,@stop,@stop) 100%);
+}
+
+.gradient-vertical(@bg1: #1a82f7, @bg2: #2F2727){
+
+    /* fallback */
+    background-color: @bg1;
+    //background-image: url(images/linear_bg_1.png);
+    background-repeat: repeat-y;
+
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, left top, right top, from(@bg1), to(@bg2));
+
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(left, @bg2, @bg1);
+
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(left, @bg2, @bg1);
+
+    /* IE 10 */
+    background: -ms-linear-gradient(left, @bg2, @bg1);
+
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(left, @bg2, @bg1);
+}
+.gradient-vertical-x(@bg1: #1a82f7, @bg2: #2F2727, @bg3: red){
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, left top, right top, from(@bg1), to(@bg2));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(left, @bg1, @bg2);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, @bg1, @bg2);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(left, @bg1, @bg2);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, @bg1, @bg2);
+
+  background-size: 50%;
+  -o-background-size: 50%;
+  -moz-background-size: 50%;
+  -webkit-background-size: 50%;
+
+  /* fallback */
+  background-color: @bg3;
+}
+
+
+.linear-gradient(@bg1: #2F2727, @bg2: #1a82f7, @diametr: 460){
+  /* fallback */
+  background-color: @bg1;
+  //background-image: url(images/radial_bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* Safari 4-5, Chrome 1-9 */
+  /* Can't specify a percentage size? Laaaaaame. */
+  background: -webkit-gradient(radial, center center, 0, center center, @diametr, from(@bg2), to(@bg1));
+
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(circle, @bg2, @bg1);
+
+  /* Firefox 3.6+ */
+  background: -moz-radial-gradient(circle, @bg2, @bg1);
+
+  /* IE 10 */
+  background: -ms-radial-gradient(circle, @bg2, @bg1);
+
+  /* Opera couldn't do radial gradients, then at some point they started supporting the -webkit- syntax, how it kinda does but it's kinda broken (doesn't do sizing) */
+
+}
+.linear-gradient-conus(@bg1: #2F2727, @bg2: #1a82f7, @diametr: 460, @conus1: 80%, @conus2: 20%){
+  /* fallback */
+  background-color: @bg1;
+  background-position: @conus1 @conus2;
+  background-repeat: no-repeat;
+
+  /* Safari 4-5, Chrome 1-9 */
+  /* Can't specify a percentage size? Laaaaaame. */
+  background: -webkit-gradient(radial, @conus1 @conus2, 0, @conus1 @conus2, @diametr, from(@bg2), to(@bg1));
+
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(@conus1 @conus2, closest-corner, @bg2, @bg1);
+
+  /* Firefox 3.6+ */
+  background: -moz-radial-gradient(@conus1 @conus2, closest-corner, @bg2, @bg1);
+
+  /* IE 10 */
+  background: -ms-radial-gradient(@conus1 @conus2, closest-corner, @bg2, @bg1);
+
+  /* Opera couldn't do radial gradients, then at some point they started supporting the -webkit- syntax, how it kinda does but it's kinda broken (doesn't do sizing) */
+}
+
+.shadow(@top:1px, @right: 10px, @bottom: 10px, @left: 1px, @shadow-color-rgba: rgba(0, 0, 0, .3)) {
+  -webkit-box-shadow: @top @right @bottom @left @shadow-color-rgba;
+  -moz-box-shadow: @top @right @bottom @left @shadow-color-rgba;
+  box-shadow: @top @right @bottom @left @shadow-color-rgba;
+}
+
+.shadow-inner(@size1: 10px, @size2: 10px, @size3: 185px, @size4: 92px, @shad-color: #3d3f42, @bg-color: #73787b){
+  background-color: @bg-color;
+  -webkit-box-shadow: inset  @size1 @size2 @size3  @size4 @shad-color;
+  -moz-box-shadow: inset @size1 @size2 @size3 @size4 @shad-color;
+  box-shadow: inset @size1 @size2 @size3 @size4 @shad-color;
+}
+
+// BORDERS & ROUNDED
+// -----------------
+.bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE) {
+  border-top: solid 1px @top-color;
+  border-left: solid 1px @left-color;
+  border-right: solid 1px @right-color;
+  border-bottom: solid 1px @bottom-color;
+}
+
+.rounded(@radius: 2px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+.rounded-corners(@tl: 3px, @tr: 3px, @br: 3px, @bl: 3px) {
+  -moz-border-radius-topleft: @tl;
+  -moz-border-radius-topright: @tr;
+  -moz-border-radius-bottomright: @br;
+  -moz-border-radius-bottomleft: @bl;
+  -webkit-border-radius: @tl @tr @br @bl;
+  border-radius: @tl @tr @br @bl;
+}
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius: @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius: @bottomleft;
+  -webkit-border-top-left-radius: @topleft;
+  -moz-border-radius-topright: @topright;
+  -moz-border-radius-bottomright: @bottomright;
+  -moz-border-radius-bottomleft: @bottomleft;
+  -moz-border-radius-topleft: @topleft;
+  border-top-right-radius: @topright;
+  border-bottom-right-radius: @bottomright;
+  border-bottom-left-radius: @bottomleft;
+  border-top-left-radius: @topleft;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+// OPACITY & TRANSITIONS
+// ---------------------
+.opacity(@opacity: 0.5) {
+  -moz-opacity: @opacity;
+  -khtml-opacity: @opacity;
+  -webkit-opacity: @opacity;
+  opacity: @opacity;
+}
+.transition-duration(@duration: 0.2s) {
+  -moz-transition-duration: @duration;
+  -webkit-transition-duration: @duration;
+  transition-duration: @duration;
+}
+.rotation(@deg:5deg){
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
+.scale(@ratio:1.5){
+  -webkit-transform:scale(@ratio);
+  -moz-transform:scale(@ratio);
+  transform:scale(@ratio);
+}
+.transition(@transition) {
+  -webkit-transition: @transition;
+  -moz-transition: @transition;
+  -ms-transition: @transition;
+  -o-transition: @transition;
+  transition: @transition;
+}
+.translate(@x:0, @y:0) {
+  -moz-transform: translate(@x, @y);
+  -webkit-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
+// TRANSFORM
+// ---------
+.skew(@angle: -30deg){
+  -webkit-transform:skewX(@angle);
+  -moz-transform:skewX(@angle);
+  -ms-transform:skewX(@angle);
+  -o-transform:skewX(@angle);
+  transform:skewX(@angle);
+}
+
+
+
+// SHADOWS
+// -------
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+.inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
+  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+  box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+.box-shadow(@arguments) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+.shadow-black-alpha() {
+  -webkit-box-shadow: 0 0 5px black;
+  -moz-box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px black;
+}
+.text-shadow(@color: #fff) {
+  text-shadow: 0px 0px 0px @color;
+}
+.shadowed(@shadow) {
+  text-shadow: @shadow;
+}
+.no-text-shadow() {
+  text-shadow: none;
+}
+
+// COLUMNS
+// -------
+.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
+  -moz-column-width: @colwidth;
+  -moz-column-count: @colcount;
+  -moz-column-gap: @colgap;
+  -moz-column-rule-color: @columnRuleColor;
+  -moz-column-rule-style: @columnRuleStyle;
+  -moz-column-rule-width: @columnRuleWidth;
+  -webkit-column-width: @colwidth;
+  -webkit-column-count: @colcount;
+  -webkit-column-gap: @colgap;
+  -webkit-column-rule-color: @columnRuleColor;
+  -webkit-column-rule-style: @columnRuleStyle;
+  -webkit-column-rule-width: @columnRuleWidth;
+  column-width: @colwidth;
+  column-count: @colcount;
+  column-gap: @colgap;
+  column-rule-color: @columnRuleColor;
+  column-rule-style: @columnRuleStyle;
+  column-rule-width: @columnRuleWidth;
+}
+
+.nobreak {
+  -webkit-column-break-inside:avoid;
+  -moz-column-break-inside:avoid;
+  -o-column-break-inside:avoid;
+  -ms-column-break-inside:avoid;
+  display: table;
+}
+
+// FONTS
+// -----
+
+.font-shorthand(@weight: normal, @size: 12px, @lineHeight: 1.2) {
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @lineHeight;
+}
+.font-sans-serif(@weight: normal, @size: 12px, @lineHeight: 1.2) {
+  .main-font;
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @lineHeight;
+}
+.font-serif(@weight: normal, @size: 12px, @lineHeight: 1.2) {
+  font-family: "Georgia", Times New Roman, Times, serif;
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @lineHeight;
+}
+.font-monospace(@weight: normal, @size: 12px, @lineHeight: 20px) {
+  font-family: "Monaco", Courier New, monospace;
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @lineHeight;
+}
+.font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+// SPACING
+// -------
+.no-spacing(){
+  letter-spacing: -.31em;
+  word-spacing: -.43em;
+}
+.spacing() {
+  letter-spacing:normal;
+  word-spacing:normal;
+}
+
+// OTHER
+// -----
+.inline-block() {
+  display: inline-block;
+  display: inline;
+  zoom: 1;
+}

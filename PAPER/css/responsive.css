@@ -1,0 +1,107 @@
+@media screen and (max-width: 1169px) {
+  .bg.container2 {
+    overflow: hidden;
+  }
+  .bg.container2 .bg-item-2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .content-button {
+    margin-bottom: 20px;
+  }
+  .prestigio .home-main-content .row .f-block {
+    margin-bottom: 20px;
+  }
+  .nav > li > a {
+    padding: 11px 10px;
+  }
+  .container {
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 769px) {
+  .home-main-content .row > div {
+    height: auto;
+    margin: 15px 10px;
+  }
+  .home-main-content img {
+    padding-right: 20px;
+  }
+  .content-button {
+    margin: 10px;
+  }
+  .home-main-content h2 {
+    margin-top: 100px;
+  }
+  .navbar-collapse {
+    border-top: 20px solid #e67e22 !important;
+  }
+  .navbar-default .navbar-collapse {
+    width: 100%;
+    padding: 0px;
+  }
+  .navbar-default .navbar-nav > li > a {
+    position: static;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .navbar-default .navbar-nav > li > a:before,
+  .navbar-default .navbar-nav > li > a:after {
+    display: none;
+  }
+  .container-fluid > .navbar-collapse {
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 480px) {
+  .gallery .gallery-content #filters {
+    width: 320px;
+    padding: 0;
+    margin-left: -5px;
+  }
+  .gallery .gallery-content #filters button {
+    display: inline-block;
+    position: static;
+    margin: 0 auto;
+    clear: both;
+    font-size: 16px;
+  }
+  .main-content-2 > h2 {
+    text-align: center;
+    font-weight: 200;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: 59px;
+  }
+  .home-main-content .row {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .home-main-content .row > div {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .home-main-content img {
+    margin-top: 10px;
+    padding-right: 0px;
+  }
+  .home-main-content h2 {
+    margin-top: 20px;
+    font-size: 40px;
+    position: static;
+  }
+  .content-button {
+    margin: 15px 0px;
+  }
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: 28px;
+  }
+}

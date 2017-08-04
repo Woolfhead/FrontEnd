@@ -1,0 +1,252 @@
+/* general */
+@import url('elements.less');
+
+/* fonts */
+@font-face {
+  font-family: 'Courier';
+  src: url('../fonts/kurlier/cour.ttf') format('truetype');
+}
+
+
+
+*, body, html{
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+.pull-center{
+  position: static;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.wrapper{
+  overflow-x: hidden;
+}
+
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0px;
+}
+
+.container{
+  content: '';
+  max-width: 1920px;
+  width: 100%;
+}
+
+/* FUNCTIONS */
+.f-menu-font(){
+  color: #9a9a9a;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: Raleway;
+  font-weight: 400;
+  .transition(all 300ms ease-in-out);
+  &:hover, &:focus, &:visited{
+    color: #404040;
+  }
+}
+
+/* END OF FUNCTIONS */
+
+/* ------------------------------------------- NAV -----------------*/
+
+.navbar.head-menu{
+  margin-bottom: 0px;
+  ul > li >  a{
+    background-color: transparent;
+    &:hover{
+      background-color: transparent;
+    }
+    .f-menu-font();
+    line-height: 56px;
+  }
+
+  border: 4px solid @color-3;
+}
+
+/* ------------------------------------------- nav  mobile -----------------*/
+.nav-mobile{
+
+
+  .navbar-toggle{
+    background-color: @color-3;
+    .icon-bar{
+      background-color: red;
+    }
+    &:focus{
+      border: 1px solid red;
+    }
+  }
+}
+
+/* ------------------------------------------- LOGO -----------------*/
+a.logo{
+  text-decoration: none;
+  img{
+    padding-top: 24px;
+  }
+  h2,h6{
+    text-align: center;
+    font-family: Courier;
+    text-transform: uppercase;
+    color: @color-2;
+  }
+  h2{
+    font-size: 28px;
+    margin-bottom: 0px;
+    span{
+      margin: 0;
+      padding: 0;
+      color: @color-3;
+    }
+  }
+  h6{
+    margin-top: 0px;
+    font-size: 14px;
+  }
+}
+/* ------------------------------------------- Gallery 1 -----------------*/
+.gallery-1{
+  margin: 0;
+  > div >div:nth-of-type(1) > a, > div:nth-of-type(2) >div > a, > div >div:nth-of-type(3) > a{
+
+    &:before{
+      content: '';
+      border: 2px solid @color-1;
+      position: absolute;
+      width: ~"calc(100% - 22px)";
+      height: ~"calc(100% - 20px)";
+      bottom: 0;
+      z-index: 3;
+      margin: 10px 9px;
+      .transition(all 300ms ease-in-out);
+
+    }
+    &:hover{
+      &:before {
+        border: 2px solid @light;
+        .opacity(0.4);
+      }
+    }
+  }
+  img{
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+
+  }
+  a{
+    text-transform: none;
+    display: block;
+    background-color: @dark;
+    position: relative;
+    > img{
+      display: block;
+      overflow: hidden;
+      .transition(all 400ms ease-in-out);
+
+    }
+    > h2{
+      overflow: hidden;
+      font-family: Raleway;
+      position: absolute;
+      top: 35%;
+      width: 60%;
+      margin: 0 20%;
+      padding: 18px 20px;
+      text-align: center;
+      text-transform: uppercase;
+      color: @color-1;
+      background-color: rgba(233,203,189,0.8);
+      z-index: 10;
+      .transition(all 400ms ease-in-out);
+    }
+    &:hover{
+      > h2{
+        background-color: rgba(233,203,189,0.4);
+        color: @dark;
+      }
+      > img{
+
+        position: static;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+.row.gallery-1{
+  .col-md-6, .col-md-3, .col-xs-12{
+    padding: 0px;
+  }
+  .row{
+    margin: 0px;
+  }
+
+}
+.center-block{
+  max-width: 100%;
+  width: 100%;
+
+  vertical-align: middle;
+  content: '';
+  &:before{
+    content: '';
+    border: 1px solid @color-3;
+    position: absolute;
+    width: ~"calc(100% - 56px)";
+    height: ~"calc(100% - 56px)";
+    bottom: 0;
+    z-index: 3;
+    margin: 28px;
+  }
+  > div{
+    position: absolute;
+    max-width: 90%;
+    width: 100%;
+    top: 35%;
+    margin: 0 5%;
+
+    h2,p{
+      text-align: center;
+    }
+    h2{
+      font-family: ~"Great Vibes";
+      font-size: 37px;
+      color: @dark;
+      &:before, &:after{
+        content: '';
+        height: 1px;
+        width: 50px;
+        background-color: @light;
+        display: inline-block;
+        line-height: 20px;
+        margin-bottom: 10px;
+      }
+      &:before{
+        margin-right: 25px;
+      }
+      &:after{
+        margin-left: 25px;
+      }
+    }
+    p{
+      font-family: ~"Raleway";
+      font-weight: normal;
+      font-size: 14px;
+      color: @dark2;
+    }
+  }
+}
+
+
+
+
+
+
